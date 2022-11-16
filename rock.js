@@ -85,7 +85,6 @@ bots.forEach(button => button.addEventListener("click", () => {
     }
 }));
 
-
 const chiK = () => {
     if(playR1 == comp){
       winner = null;
@@ -103,7 +102,3 @@ const chiK = () => {
 const hist = () =>{
   return `Player: ${playR1}  |  Computer: ${comp}`;
 }
-
-
-
-

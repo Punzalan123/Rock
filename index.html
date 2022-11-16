@@ -27,7 +27,7 @@
         }
         .rockbox{
             background-color: #06283D; 
-            border: solid 1px #47B5FF;
+            border: solid 1px rgb(71, 181, 255);
             transition: 0.5s ease;
         }
         .bots{
@@ -36,6 +36,16 @@
         .bots:hover{
             transition: 0.5s ease;
             transform: scale(1.05);
+        }
+        .bots:nth-child(1):hover{
+            box-shadow: rgba(23, 162, 184, 0.65) 0px 2px 6px;
+            
+        }
+        .bots:nth-child(2):hover{
+            box-shadow: rgba(255, 193, 7, 0.65) 0px 2px 6px;
+        }
+        .bots:nth-child(3):hover{
+            box-shadow: rgba(220, 53, 69, 0.65) 0px 2px 6px;
         }
         body::-webkit-scrollbar{
             width: 5px;
@@ -65,7 +75,7 @@
             color: white;
             text-decoration: underline;
             text-decoration-color: white;
-            transform: scale(1.05);
+            transform: scale(1.03);
             cursor: pointer;
         }
         .modal .modal-body {    
