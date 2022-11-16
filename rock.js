@@ -6,11 +6,29 @@ ps = document.getElementById('Pscor');
 cs = document.getElementById('Cscor');
 np = 0;
 nc = 0;
-
+// document.getElementById('history').style.display = 'none';
+h = document.getElementById('history');
+g = document.getElementById('score');
+i = document.getElementById('compscore');
+j = document.getElementById('playscore');
+h.style.display = 'none';
+g.style.display = 'none';
+i.style.display = 'none';
+j.style.display = 'none';
+pleyawan.style.display = 'none';
+compshop.style.display = 'none';
+win.style.display = 'none';
 
 
 bots.forEach(button => button.addEventListener("click", () => {
 
+    h.style.display = 'block';
+    g.style.display = 'block';
+    i.style.display = 'block';
+    j.style.display = 'block';
+    pleyawan.style.display = 'block';
+    compshop.style.display = 'block';
+    win.style.display = 'block';
     playR1 = button.id;
     // next();
     brandy = Math.floor(Math.random() * 3) + 1;

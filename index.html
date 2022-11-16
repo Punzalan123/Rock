@@ -8,29 +8,77 @@
     <link rel="icon" type="image/x-icon" href="ico.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Rock🗴Paper🗴Scissors</title>
+    <style>
+        h1, h2, h2 span{
+            color: #DFF6FF;
+        }
+        body{
+            background-image: linear-gradient(to bottom right,  #06283D, #1363DF, #47B5FF);
+            width: 100%;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        .container-fluid, .qwerty{
+            min-height: 100vh;
+            transition: 0.5s ease;
+        }
+        .rockbox{
+            background-color: #06283D; 
+            border: solid 1px #47B5FF;
+            transition: 0.5s ease;
+        }
+        .bots{
+            transition: 0.1s ease;
+        }
+        .bots:hover{
+            transition: 0.5s ease;
+            transform: scale(1.05);
+        }
+        body::-webkit-scrollbar{
+            width: 5px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #06283D;
+        }
+
+        body::-webkit-scrollbar-track{
+            background-color: #47B5FF;
+        }
+        .rocktitle{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .qwerty{
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
-<body style="background-color: #1363DF;">
+<body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 
-    <div class="container-fluid" style="height: 100vh;">
-        <div class="d-flex mt-auto" style="height: 100vh;">
-            <div class="m-auto text-white text-center rounded-4 p-3 pt-4 pb-4 col-12 col-lg-6 col-md-8" style="background-color: #06283D; border: solid 15px #47B5FF;">
-                <h1 class="display-5 fw-bold" id="ako" style="color: #DFF6FF;">Player: </h1>
-                <h1 class="display-5 fw-bold" id="computer" style="color: #DFF6FF;">Computer: </h1>
-                <h1 class="display-5 fw-bold fst-italic" id="res" style="color: #DFF6FF;">Result: </h1>
+    <div class="container-fluid">
+        <div class="qwerty d-flex flex-column mt-auto">
+            <h1 class="rocktitle">Rock🗴Paper🗴Scissors</h1>
+            <div class="rockbox text-center rounded-4 p-3 pt-4 pb-4 col-12 col-lg-6 col-md-8">
+                <h1 class="display-5 fw-bold" id="ako">Player: </h1>
+                <h1 class="display-5 fw-bold" id="computer">Computer: </h1>
+                <h1 class="display-5 fw-bold fst-italic" id="res">Result: </h1>
                 <div class="mt-3 mb-3 text-center">
                     <button class="bots btn w-25 m-2 fs-1 text-info" id="Rock"><i class="fa-solid fa-hand-back-fist"></i></button>
                     <button class="bots btn w-25 m-2 fs-1 text-warning" id="Paper"><i class="fa-solid fa-hand"></i></button>
                     <button class="bots btn w-25 m-2 fs-1 text-danger" id="Scissors"><i class="fa-solid fa-hand-scissors"></i></button>
                 </div>
                 <div class="m-3">                
-                    <h1 class="display-5 fw-bold" style="color: #DFF6FF;">Score</h1>
-                    <h2 class="text-start" style="color: #DFF6FF;">Player: <span id="Pscor"></span></h2>
-                    <h2 class="text-start" style="color: #DFF6FF;">Computer: <span id="Cscor"></span></h2>
+                    <h1 class="display-5 fw-bold" id="score">Score</h1>
+                    <h2 class="text-start" id="playscore">Player: <span id="Pscor"></span></h2>
+                    <h2 class="text-start" id="compscore">Computer: <span id="Cscor"></span></h2>
                 </div>
-                <h1 class="fw-bold mb-3" id="history" style="color: #DFF6FF;">Match History: </h1>
+                <h1 class="fw-bold mb-3" id="history">Match History:</h1>
                 <div class="fst-italic" id="disp"></div>
+                <h4>View History</h4>
             </div>
             
         </div>
