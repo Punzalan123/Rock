@@ -11,6 +11,7 @@ g = document.getElementById('score');
 i = document.getElementById('compscore');
 j = document.getElementById('playscore');
 k = document.getElementById('view');  
+l = document.getElementById('click');
 h.style.display = 'none';
 g.style.display = 'none';
 i.style.display = 'none';
@@ -30,6 +31,7 @@ bots.forEach(button => button.addEventListener("click", () => {
     pleyawan.style.display = 'block';
     compshop.style.display = 'block';
     win.style.display = 'block';
+    l.style.display = 'none';
     playR1 = button.id;
     // next();
     brandy = Math.floor(Math.random() * 3) + 1;

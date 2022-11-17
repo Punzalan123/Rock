@@ -12,9 +12,6 @@
         h1, h2, h2 span, h4{
             color: #DFF6FF;
         }
-        h1{
-            font-weight: bold !important;
-        }
         body{
             background-image: linear-gradient(to bottom right,  #06283D, #1363DF, #47B5FF);
             width: 100%;
@@ -104,26 +101,27 @@
     <div class="container-fluid">
         <div class="qwerty d-flex flex-column mt-auto">
             <h1 class="rocktitle">Rock🗴Paper🗴Scissors</h1>
-            <div class="rockbox text-center rounded-4 p-3 pt-4 pb-4 col-12 col-lg-6 col-md-8">
-                <h1 class="display-5" id="ako">Player: </h1>
-                <h1 class="display-5" id="computer">Computer: </h1>
-                <h1 class="display-5 fst-italic" id="res">Result: </h1>
-                <div class="mt-3 mb-3 text-center">
+            <h4  id="click">(Click to play)</h4>
+            <div class="rockbox text-center rounded-4 px-3 py-4 col-12 col-lg-6 col-md-8">
+                <h1 class="" id="ako">Player: </h1>
+                <h1 class="" id="computer">Computer: </h1>
+                <h1 class="fst-italic" id="res">Result: </h1>
+                <div class="my-5 text-center">
                     <button class="bots btn w-25 m-2 fs-1 text-info" id="Rock"><i class="fa-solid fa-hand-back-fist"></i></button>
                     <button class="bots btn w-25 m-2 fs-1 text-warning" id="Paper"><i class="fa-solid fa-hand"></i></button>
                     <button class="bots btn w-25 m-2 fs-1 text-danger" id="Scissors"><i class="fa-solid fa-hand-scissors"></i></button>
                 </div>
-                <div class="m-3">                
-                    <h1 class="display-5" id="score">Score</h1>
+                <div class="my-4 px-4">                
+                    <h1 class="" id="score">Score</h1>
                     <h2 class="text-start" id="playscore">Player: <span id="Pscor"></span></h2>
                     <h2 class="text-start" id="compscore">Computer: <span id="Cscor"></span></h2>
                 </div>
-                <h1 class="mb-3" id="history">Match History:</h1>
+                <h1 class="my-4" id="history">Match History</h1>
                 <div class="fst-italic" id="disp"></div>
-                <h4 class="mt-5" id="view" data-bs-toggle="modal" data-bs-target="#stat">View History</h4>
+                <h4 class="mt-4" id="view" data-bs-toggle="modal" data-bs-target="#stat">View History</h4>
                 <!-- Modal -->
                 <div class="modal fade" id="stat" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sbl" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
                             <h5 class="modal-title text-white text-center" id="sbl">Match History</h5>
