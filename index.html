@@ -13,7 +13,7 @@
             color: #DFF6FF;
         }
         body{
-            background-image: linear-gradient(to bottom right,  #06283D, #1363DF, #47B5FF);
+            background-image: linear-gradient(to bottom right, #1363DF, #47B5FF);
             width: 100%;
             background-repeat: no-repeat;
             min-height: 100vh;
@@ -23,9 +23,9 @@
             transition: 0.5s ease;
         }
         .rockbox{
-            background-color: #06283D; 
-            border: solid 1px rgb(71, 181, 255);
+            background: #06283D;
             transition: 0.5s ease;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
         .bots{
             transition: 0.1s ease;
@@ -62,6 +62,7 @@
         .qwerty{
             justify-content: center;
             align-items: center;
+            padding: 40px 0;
         }
         #view{
             color: #47B5FF;
@@ -102,7 +103,7 @@
         <div class="qwerty d-flex flex-column mt-auto">
             <h1 class="rocktitle">Rock🗴Paper🗴Scissors</h1>
             <h4  id="click">(Click to play)</h4>
-            <div class="rockbox text-center rounded-4 px-3 py-4 col-12 col-lg-6 col-md-8">
+            <div class="rockbox text-center px-3 py-4 col-12 col-lg-6 col-md-8">
                 <h1 class="" id="ako">Player: </h1>
                 <h1 class="" id="computer">Computer: </h1>
                 <h1 class="fst-italic" id="res">Result: </h1>
