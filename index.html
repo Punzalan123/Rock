@@ -1,146 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/02c032f7e0.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="ico.jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/02c032f7e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="ico.jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Rock🗴Paper🗴Scissors</title>
-    <style>
-        h1, h2, h2 span, h4{
-            color: #DFF6FF;
-        }
-        body{
-            background-image: linear-gradient(to bottom right, #1363DF, #47B5FF);
-            width: 100%;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-        }
-        .container-fluid, .qwerty{
-            min-height: 100vh;
-            transition: 0.5s ease;
-        }
-        .rockbox{
-            background: #06283D;
-            transition: 0.5s ease;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        }
-        .bots{
-            transition: 0.1s ease;
-        }
-        .bots:hover{
-            transition: 0.5s ease;
-            transform: scale(1.05);
-        }
-        .bots:nth-child(1):hover{
-            box-shadow: rgba(23, 162, 184, 0.65) 0px 2px 6px;
-            
-        }
-        .bots:nth-child(2):hover{
-            box-shadow: rgba(255, 193, 7, 0.65) 0px 2px 6px;
-        }
-        .bots:nth-child(3):hover{
-            box-shadow: rgba(220, 53, 69, 0.65) 0px 2px 6px;
-        }
-        body::-webkit-scrollbar{
-            width: 5px;
-        }
-
-        body::-webkit-scrollbar-thumb, .modal-content {
-            background-color: #06283D;
-        }
-
-        body::-webkit-scrollbar-track{
-            background-color: #47B5FF;
-        }
-        .rocktitle{
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .qwerty{
-            justify-content: center;
-            align-items: center;
-            padding: 40px 0;
-        }
-        #view{
-            color: #47B5FF;
-            transition: 0.1s ease;
-        }
-        #view:hover{
-            transition: 0.5s ease;
-            color: white;
-            text-decoration: underline;
-            text-decoration-color: white;
-            transform: scale(1.03);
-            cursor: pointer;
-        }
-        .modal .modal-body {    
-            overflow-y: auto;
-            max-height: 60vh;
-        }
-        .modal-body::-webkit-scrollbar{
-            width: 2px;
-        }
-        .modal-body::-webkit-scrollbar-thumb{
-            background-color: #47B5FF;
-            outline: 1px solid #47B5FF;
-        }
-        .modal-header{
-            border-bottom: solid 1px #47B5FF;
-        }
-        .modal-footer{
-            border-top: solid 1px #47B5FF;
-        }
-    </style>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
 
     <div class="container-fluid">
-        <div class="qwerty d-flex flex-column mt-auto">
-            <h1 class="rocktitle">Rock🗴Paper🗴Scissors</h1>
-            <h4  id="click">(Click to play)</h4>
-            <div class="rockbox text-center px-3 py-4 col-12 col-lg-6 col-md-8">
-                <h1 class="" id="ako">Player: </h1>
-                <h1 class="" id="computer">Computer: </h1>
-                <h1 class="fst-italic" id="res">Result: </h1>
-                <div class="my-5 text-center">
-                    <button class="bots btn w-25 m-2 fs-1 text-info" id="Rock"><i class="fa-solid fa-hand-back-fist"></i></button>
-                    <button class="bots btn w-25 m-2 fs-1 text-warning" id="Paper"><i class="fa-solid fa-hand"></i></button>
-                    <button class="bots btn w-25 m-2 fs-1 text-danger" id="Scissors"><i class="fa-solid fa-hand-scissors"></i></button>
+      <div class="qwerty d-flex flex-column mt-auto">
+        <h1 class="rocktitle">Rock🗴Paper🗴Scissors</h1>
+        <h4 id="click">(Click to play)</h4>
+        <div class="rockbox text-center px-3 py-4 col-12 col-lg-6 col-md-8">
+          <h1 class="" id="ako">Player:</h1>
+          <h1 class="" id="computer">Computer:</h1>
+          <h1 class="fst-italic" id="res">Result:</h1>
+          <div class="my-4 text-center">
+            <button class="bots btn w-25 m-2 fs-1 text-info" id="Rock">
+              <i class="fa-solid fa-hand-back-fist"></i>
+            </button>
+            <button class="bots btn w-25 m-2 fs-1 text-warning" id="Paper">
+              <i class="fa-solid fa-hand"></i>
+            </button>
+            <button class="bots btn w-25 m-2 fs-1 text-danger" id="Scissors">
+              <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+          </div>
+          <div class="my-3 px-4">
+            <h1 class="" id="score">Score</h1>
+            <h2 class="text-start" id="playscore">
+              Player: <span id="Pscor"></span>
+            </h2>
+            <h2 class="text-start" id="compscore">
+              Computer: <span id="Cscor"></span>
+            </h2>
+          </div>
+          <h1 class="my-3" id="history">Match History</h1>
+          <div class="fst-italic" id="disp"></div>
+          <h4
+            class="mt-4"
+            id="view"
+            data-bs-toggle="modal"
+            data-bs-target="#stat"
+          >
+            View History
+          </h4>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="stat"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="sbl"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-white text-center" id="sbl">
+                    Match History
+                  </h5>
                 </div>
-                <div class="my-4 px-4">                
-                    <h1 class="" id="score">Score</h1>
-                    <h2 class="text-start" id="playscore">Player: <span id="Pscor"></span></h2>
-                    <h2 class="text-start" id="compscore">Computer: <span id="Cscor"></span></h2>
+                <div class="modal-body">
+                  <div class="fst-italic" id="disp2"></div>
                 </div>
-                <h1 class="my-4" id="history">Match History</h1>
-                <div class="fst-italic" id="disp"></div>
-                <h4 class="mt-4" id="view" data-bs-toggle="modal" data-bs-target="#stat">View History</h4>
-                <!-- Modal -->
-                <div class="modal fade" id="stat" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sbl" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title text-white text-center" id="sbl">Match History</h5>
-                            </div>
-                            <div class="modal-body">
-                                <div class="fst-italic" id="disp2"></div>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
                 </div>
+              </div>
             </div>
-            
+          </div>
         </div>
-        
+      </div>
     </div>
     <script src="rock.js"></script>
-</body>
+  </body>
 </html>
